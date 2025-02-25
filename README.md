@@ -2,6 +2,8 @@
 
 CodeMasters é uma aplicação que funciona como um fórum para armazenar e compartilhar artigos sobre tecnologia. O objetivo é criar um ambiente colaborativo onde eu possa compartilhar meus conhecimentos sobre o assunto.
 
+![image](https://github.com/user-attachments/assets/3ecbc856-f1d6-48d6-8f49-24b221bfa7b1)
+
 ## Tecnologias Utilizadas
 - **Frontend:** Vue.js 3 + Vite
 - **Gerenciamento de Estado:** Pinia
