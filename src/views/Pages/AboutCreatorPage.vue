@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <img
-      src="../../assets/LUIZA.JPG"
+      src="../../assets/LUIZA.jpg"
       alt="Foto de perfil de Luiza"
       class="profile-img"
       loading="lazy"
