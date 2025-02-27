@@ -7,8 +7,8 @@
         <button type="submit">🔍</button>
       </div>
       <div>
-        <router-link to="/login" class="read-more">Login</router-link>
-        <router-link to="/register" class="read-more">Registre-se</router-link>
+          <!-- <router-link to="/login" class="read-more">Login</router-link>
+          <router-link to="/register" class="read-more">Registre-se</router-link> -->
       </div>
     </nav>
   </div>
