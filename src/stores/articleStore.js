@@ -2,6 +2,16 @@ import { defineStore } from 'pinia'
 
 export const useArticleStore = defineStore('article', {
   state: () => ({
+    tagsMustAccess: [
+      'IA',
+      'Cibersegurança',
+      'Web3',
+      'Cloud',
+      'DevOps',
+      'Frontend',
+      'Mobile',
+      'UX/UI',
+    ],
     items: [
       {
         id: 1,
@@ -31,6 +41,9 @@ export const useArticleStore = defineStore('article', {
       },
     ],
   }),
+  getters: {
+    getArticleById: (state) => (id) => state.items.find((article) => article.id === id),
+  },
   actions: {
     upvote(id) {
       console.log(id)
@@ -40,6 +53,10 @@ export const useArticleStore = defineStore('article', {
     downvote(id) {
       const article = this.items.find((a) => a.id === id)
       if (article) article.votes--
+    },
+    getByTags(tag) {
+      const article = this.items.find((a) => a.tags === tag)
+      return article
     },
   },
 })

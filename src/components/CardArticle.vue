@@ -15,15 +15,7 @@
           <a v-for="tag in article.tags" :key="tag" href="#" class="tag">{{ tag }}</a>
         </div>
         <div class="article-footer">
-          <div class="vote-buttons">
-            <button class="vote-btn upvote" @click="upvote(article.id)">
-              <span class="material-icons">thumb_up</span>
-            </button>
-            <span class="vote-count">{{ article.votes }}</span>
-            <button class="vote-btn downvote" @click="downvote(article.id)">
-              <span class="material-icons">thumb_down</span>
-            </button>
-          </div>
+          <ClassifyVote :article="article" />
           <router-link :to="'/article/' + article.id" class="read-more">Ler mais</router-link>
         </div>
       </div>
@@ -33,14 +25,8 @@
 
 <script setup>
 import { useArticleStore } from '@/stores/articleStore'
+import ClassifyVote from './ClassifyVote.vue'
+
 const articleStore = useArticleStore()
 let articles = articleStore.items
-
-const upvote = (id) => {
-  articleStore.upvote(id)
-}
-
-const downvote = (id) => {
-  articleStore.downvote(id)
-}
 </script>
